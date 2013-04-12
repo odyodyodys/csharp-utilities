@@ -1,0 +1,16 @@
+R:\Shared\C#\Utilities\Utilities\bin\Release\Utilities.dll
+R:\Shared\C#\Utilities\Utilities\bin\Release\Utilities.pdb
+R:\Shared\C#\Utilities\Utilities\obj\Release\ResolveAssemblyReference.cache
+R:\Shared\C#\Utilities\Utilities\obj\Release\Utilities.UI.LogViewerControl.resources
+R:\Shared\C#\Utilities\Utilities\obj\Release\ResGen.read.1.tlog
+R:\Shared\C#\Utilities\Utilities\obj\Release\ResGen.write.1.tlog
+R:\Shared\C#\Utilities\Utilities\obj\Release\Utilities.dll
+R:\Shared\C#\Utilities\Utilities\obj\Release\Utilities.pdb
+C:\dev\Odys\Shared\C#\Utilities\Utilities\bin\Release\Utilities.dll
+C:\dev\Odys\Shared\C#\Utilities\Utilities\bin\Release\Utilities.pdb
+C:\dev\Odys\Shared\C#\Utilities\Utilities\obj\Release\ResolveAssemblyReference.cache
+C:\dev\Odys\Shared\C#\Utilities\Utilities\obj\Release\Utilities.UI.LogViewerControl.resources
+C:\dev\Odys\Shared\C#\Utilities\Utilities\obj\Release\ResGen.read.1.tlog
+C:\dev\Odys\Shared\C#\Utilities\Utilities\obj\Release\ResGen.write.1.tlog
+C:\dev\Odys\Shared\C#\Utilities\Utilities\obj\Release\Utilities.dll
+C:\dev\Odys\Shared\C#\Utilities\Utilities\obj\Release\Utilities.pdb
