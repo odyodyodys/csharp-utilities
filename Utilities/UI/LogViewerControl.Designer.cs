@@ -5,7 +5,7 @@
         /// <summary> 
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private global::System.ComponentModel.IContainer components = null;
 
         /// <summary> 
         /// Clean up any resources being used.
@@ -40,6 +40,7 @@
             this.LogTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.LogTextBox.ContextMenuStrip = this.MainContextMenuStrip;
             this.LogTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LogTextBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.LogTextBox.Location = new System.Drawing.Point(0, 0);
             this.LogTextBox.MaxLength = 2147483647;
             this.LogTextBox.Multiline = true;
@@ -79,8 +80,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox LogTextBox;
-        private System.Windows.Forms.ContextMenuStrip MainContextMenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
+        private global::System.Windows.Forms.TextBox LogTextBox;
+        private global::System.Windows.Forms.ContextMenuStrip MainContextMenuStrip;
+        private global::System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
     }
 }

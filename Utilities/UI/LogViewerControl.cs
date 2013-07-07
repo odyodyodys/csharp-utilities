@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Data;
 using System.Linq;
@@ -20,6 +20,16 @@ namespace Utilities.UI
 
 		#region Methods
         public void SetLogMessage(string message)
+        {
+            this.InvokeIfRequired(() => { SetLogMessageCore(message); });
+        }
+
+        public void SetLogMessage(string message, params object[] args)
+        {
+            this.InvokeIfRequired(() => { SetLogMessageCore(string.Format(message, args)); });
+        }
+
+        private void SetLogMessageCore(string message)
         {
             if (String.IsNullOrEmpty(LogTextBox.Text))
             {
@@ -44,12 +54,11 @@ namespace Utilities.UI
             LogTextBox.SelectionStart = LogTextBox.TextLength;
             LogTextBox.ScrollToCaret();
         }
+
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LogTextBox.Text = string.Empty;
         }
-		
 		#endregion
-
     }
 }

@@ -24,6 +24,8 @@
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation />
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,6 +52,7 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq">
@@ -66,6 +69,8 @@
     <Compile Include="Convert\ConverterException.cs" />
     <Compile Include="Convert\IConverter.cs" />
     <Compile Include="Convert\MathUnitToStringConverter.cs" />
+    <Compile Include="Events\Delegates.cs" />
+    <Compile Include="IO\FileDelegates.cs" />
     <Compile Include="IO\FilenameSanitizer.cs" />
     <Compile Include="Math\MathUnitType.cs" />
     <Compile Include="Math\MathValue.cs" />
@@ -76,7 +81,13 @@
     <Compile Include="Security\StringEncryption.cs" />
     <Compile Include="Serialize\ISerializable.cs" />
     <Compile Include="Serialize\ValueSerializer.cs" />
-    <Compile Include="System\Account.cs" />
+    <Compile Include="UI\FileDropPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\FileDropPanel.Designer.cs">
+      <DependentUpon>FileDropPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ISynchronizeInvokeEx.cs" />
     <Compile Include="UI\LogViewerControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,6 +96,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="UI\FileDropPanel.resx">
+      <DependentUpon>FileDropPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\LogViewerControl.resx">
       <DependentUpon>LogViewerControl.cs</DependentUpon>
       <SubType>Designer</SubType>

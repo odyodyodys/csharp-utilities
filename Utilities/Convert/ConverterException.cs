@@ -11,8 +11,8 @@ namespace Utilities.Convert
         public ConverterException(string message) : base(message) { }
         public ConverterException(string message, Exception inner) : base(message, inner) { }
         protected ConverterException(
-          System.Runtime.Serialization.SerializationInfo info,
-          System.Runtime.Serialization.StreamingContext context)
+          global::System.Runtime.Serialization.SerializationInfo info,
+          global::System.Runtime.Serialization.StreamingContext context)
             : base(info, context) { }
     }
 }
