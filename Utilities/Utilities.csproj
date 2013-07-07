@@ -72,6 +72,7 @@
     <Compile Include="Events\Delegates.cs" />
     <Compile Include="IO\FileDelegates.cs" />
     <Compile Include="IO\FilenameSanitizer.cs" />
+    <Compile Include="Math\CryptoRandom.cs" />
     <Compile Include="Math\MathUnitType.cs" />
     <Compile Include="Math\MathValue.cs" />
     <Compile Include="Network\TelnetClient.cs" />
