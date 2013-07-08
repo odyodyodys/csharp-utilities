@@ -36,4 +36,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
 [assembly: InternalsVisibleTo("EnvironmentSwitcher")]
-[assembly: InternalsVisibleTo("WindowsFormsApplication3")]
+[assembly: InternalsVisibleTo("Randomizer")]
