@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Collections\EnumerableExtensions.cs" />
     <Compile Include="Collections\Pair.cs" />
     <Compile Include="Convert\ConverterException.cs" />
     <Compile Include="Convert\IConverter.cs" />

@@ -6,14 +6,35 @@ using System.Security.Cryptography;
 
 namespace Randomizer
 {
-    internal class CryptoRandom
+    public class CryptoRandom: Random
     {
-        internal static int Next(int max)
+        public override int Next()
         {
-            return Next(0, max);
+            return CryptoNext(0, System.Int32.MaxValue);
         }
 
-        internal static int Next(int min, int max)
+        public override int Next(int maxValue)
+        {
+            return CryptoNext(0, maxValue);
+        }
+
+        public override int Next(int minValue, int maxValue)
+        {
+            return CryptoNext(minValue, maxValue);
+        }
+
+        public override double NextDouble()
+        {
+            int nextInt = CryptoNext(0, System.Int32.MaxValue);
+            return 1.0f * System.Int32.MaxValue / nextInt;
+        }
+
+        public override void NextBytes(byte[] buffer)
+        {
+            throw new NotImplementedException("NextBytes");
+        }
+
+        internal static int CryptoNext(int min, int max)
         {
             RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
             byte[] buffer = new byte[4];
