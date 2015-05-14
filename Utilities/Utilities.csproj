@@ -75,6 +75,7 @@
     <Compile Include="Convert\IConverter.cs" />
     <Compile Include="Convert\MathUnitToStringConverter.cs" />
     <Compile Include="Events\Delegates.cs" />
+    <Compile Include="IO\FileFolderUtils.cs" />
     <Compile Include="IO\FileDelegates.cs" />
     <Compile Include="IO\FilenameSanitizer.cs" />
     <Compile Include="Math\CryptoRandom.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Security\StringEncryption.cs" />
     <Compile Include="Serialize\ISerializable.cs" />
     <Compile Include="Serialize\ValueSerializer.cs" />
+    <Compile Include="StringUtils\NaturalStringComparer.cs" />
     <Compile Include="ThirdParty\NlogConfigurator.cs" />
     <Compile Include="UI\FileDropPanel.cs">
       <SubType>UserControl</SubType>
