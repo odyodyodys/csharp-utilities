@@ -1,27 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Utilities.Pattern
 {
-    /*
-     * Description: Applies the Singleton pattern to a class.
+/*
+     * Description: Applies the Singleton pattern to a class, providing one instance per thread.
      * Usage: 
      *  private ClassA(){} // constructor
      *  public static ClassA Instance // property
      *  {
-     *      get { return Singleton<ClassA>.Instance; }
+     *      get { return ThreadSingleton<ClassA>.Instance; }
      *  }
     */
 
-    public static class Singleton<T> where T : class
+    internal static class ThreadSingleton<T> where T : class
     {
+        [ThreadStatic]
         private static volatile T _instance;
         private static object _lock = new object();
 
-        static Singleton()
+        static ThreadSingleton()
         {
         }
 
@@ -44,7 +46,7 @@ namespace Utilities.Pattern
                 }
                 catch (Exception e)
                 {
-                    throw new Exception(typeof(T).ToString() + " cannot be instantiated as a singleton. It is not a class." + Environment.NewLine + e.Message);
+                    throw new Exception(typeof(T).ToString() + " cannot be instantiated as a Thread Singleton. It is not a class." + Environment.NewLine + e.Message);
                 }
             }
         }
