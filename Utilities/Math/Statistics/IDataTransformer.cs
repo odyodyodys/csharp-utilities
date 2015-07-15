@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Utilities.Math.Statistics
 {
-    public interface IDataAnalyzer<DataType, ResultType>
+    public interface IDataTransformer<DataType, ResultType>
     {
         /**
          * Applies the probability logic and returns the result
          */
-        ResultType Value(IEnumerable<DataType> data);
+        ResultType Value(DataType data);
     }
 }

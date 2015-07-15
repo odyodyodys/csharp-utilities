@@ -10,7 +10,7 @@ namespace Utilities.Math.Statistics
     /**
      * Given a collection of numerical data it returns the median.
      */
-    internal class MedianDataAnalyzer<DataType>: IDataAnalyzer<DataType, double?>
+    internal class MedianDataTransformer<DataType>: IDataTransformer<IEnumerable<DataType>, double?>
     {
         public double? Value(IEnumerable<DataType> data)
         {
@@ -20,6 +20,6 @@ namespace Utilities.Math.Statistics
                 result = data.Median();
             }
             return result;
-        }   
+        }
     }
 }
