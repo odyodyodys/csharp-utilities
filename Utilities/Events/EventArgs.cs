@@ -8,7 +8,7 @@ namespace Utilities.Events
 {
     public class EventArgs<Type>: EventArgs
     {
-        public Type Value { set; get; }
+        public Type Value { get; set; }
         public EventArgs(Type value)
         {
             Value = value;

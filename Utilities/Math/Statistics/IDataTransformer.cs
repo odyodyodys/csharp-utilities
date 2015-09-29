@@ -9,8 +9,8 @@ namespace Utilities.Math.Statistics
     public interface IDataTransformer<DataType, ResultType>
     {
         /**
-         * Applies the probability logic and returns the result
+         * Applies the transformation logic and returns the result
          */
-        ResultType Value(DataType data);
+        ResultType Transform(DataType data);
     }
 }

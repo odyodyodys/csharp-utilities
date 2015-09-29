@@ -13,8 +13,8 @@ namespace Utilities.Math.Statistics
 
     public class LinearConverter
     {
-        public double Zero { set; get; }
-        public double Lambda { set; get; }
+        public double Zero { get; set; }
+        public double Lambda { get; set; }
 
         public LinearConverter()
         {

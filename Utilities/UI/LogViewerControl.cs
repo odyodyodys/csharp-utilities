@@ -11,14 +11,14 @@ namespace Utilities.UI
 {
     public partial class LogViewerControl : UserControl
     {
-	    #region Constructors
+        #region Constructors
         public LogViewerControl()
         {
             InitializeComponent();
         }
-	    #endregion
+        #endregion
 
-		#region Methods
+        #region Methods
         public void SetLogMessage(string message)
         {
             this.InvokeIfRequired(() => { SetLogMessageCore(message); });
@@ -45,9 +45,9 @@ namespace Utilities.UI
         {
             LogTextBox.Clear();
         }
-		#endregion
+        #endregion
 
-		#region Events
+        #region Events
         private void LogTextBox_TextChanged(object sender, EventArgs e)
         {
             // scroll to end
@@ -59,6 +59,6 @@ namespace Utilities.UI
         {
             LogTextBox.Text = string.Empty;
         }
-		#endregion
+        #endregion
     }
 }

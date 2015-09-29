@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Utilities.Collections
 {
     // ConcurrentQueue with fixed size. Based on http://stackoverflow.com/a/5852926/245495
-    public class ConcurrentFixedSizedQueue<T>: ConcurrentQueue<T>
+    public class ConcurrentFixedSizedQueue<T> : ConcurrentQueue<T>
     {
         private object _lock;
         public int Limit { get; set; }
@@ -18,7 +18,7 @@ namespace Utilities.Collections
             _lock = new object();
         }
 
-        public void Enqueue(T obj)
+        public new void Enqueue(T obj)
         {
             base.Enqueue(obj);
             lock (_lock)

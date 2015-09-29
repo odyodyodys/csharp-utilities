@@ -28,18 +28,18 @@ namespace Utilities.Serialize
             string serialized = string.Empty;
             try
             {
-	            string precisionFormat = new string('0', precision);
-	
-	            string positiveNumericFormat = new string('0', (int)digits);
-	            string negativeNumericFormat = new string('0', (int)digits - 1);
-	
-	            serialized = string.Format("{0:" + positiveNumericFormat.Substring(1 + precision) + "." + precisionFormat +
-	                                       ";-" + negativeNumericFormat.Substring(1 + precision) + "." + precisionFormat +
+                string precisionFormat = new string('0', precision);
+ 
+                string positiveNumericFormat = new string('0', (int)digits);
+                string negativeNumericFormat = new string('0', (int)digits - 1);
+ 
+                serialized = string.Format("{0:" + positiveNumericFormat.Substring(1 + precision) + "." + precisionFormat +
+                                           ";-" + negativeNumericFormat.Substring(1 + precision) + "." + precisionFormat +
                                            "}", value).Replace(',', '.');
             }
             catch (System.Exception e)
             {
-            	throw new ConverterException(e.Message);
+                throw new ConverterException(e.Message);
             }
             return serialized;
         }

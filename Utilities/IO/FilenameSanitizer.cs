@@ -9,13 +9,13 @@ namespace Utilities.IO
 {
     public class FilenameSanitizer
     {
-		#region Methods
+        #region Methods
         public string Sanitize(string oldFilename)
         {
             string regexSearch = new string(Path.GetInvalidFileNameChars()) + new string(Path.GetInvalidPathChars());
             Regex regex = new Regex(string.Format("[{0}]", Regex.Escape(regexSearch)));
             return regex.Replace(oldFilename, "");
         }
-		#endregion
+        #endregion
     }
 }
